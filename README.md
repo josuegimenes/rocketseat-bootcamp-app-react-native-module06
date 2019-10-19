@@ -1,6 +1,6 @@
 # Rocketseat BootCamp (Módulo 06) - React Native
 
-Desenvolvimento de um app para busca de Repositórios e issues através da API do GitHub.
+Desenvolvimento de um app para busca de Repositórios e Favoritos através da API do GitHub.
 
 ### Aplicação
 

@@ -13,6 +13,9 @@ import com.facebook.soloader.SoLoader;
 
 import java.util.List;
 
+// 1. Import the plugin class.
+import com.microsoft.codepush.react.CodePush;
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -33,6 +36,11 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected String getJSMainModuleName() {
       return "index";
+    }
+
+    @Override
+    protected String getJSBundleFile() {
+        return CodePush.getJSBundleFile();
     }
   };
 

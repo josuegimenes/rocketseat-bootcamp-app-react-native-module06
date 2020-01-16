@@ -171,14 +171,24 @@ android {
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.debug
+            // signingConfig signingConfigs.debug
+            buildConfigField "String", "CODEPUSH_KEY", '""'
         }
+
+        releaseStaging {
+          buildConfigField "String", "CODEPUSH_KEY", '"TLaYaxpvZ494kn5aREaJb8LE_LEhkh4z7Pgbm"'
+
+          matchingFallbacks = ['debug', 'release']
+        }
+
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+
+            buildConfigField "String", "CODEPUSH_KEY", '"5LZDe3hQEkkAfUjXnXuGWdZc6AlERVSoovEyP"'
         }
     }
     // applicationVariants are e.g. debug, release

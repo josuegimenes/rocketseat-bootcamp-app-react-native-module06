@@ -94,7 +94,7 @@ export default class Main extends Component {
           <Input
             autoCorrect={false}
             autoCapitalize="none"
-            placeholder="Adicionar usuário"
+            placeholder="Adicionar usuário GitHub"
             value={newUser}
             onChangeText={text => this.setState({ newUser: text })}
             returnKeyType="send"
